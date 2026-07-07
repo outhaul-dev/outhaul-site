@@ -1,0 +1,27 @@
+#!/bin/sh
+# Outhaul installer — served at https://outhaul.sh/install
+#
+#   curl -fsSL https://outhaul.sh/install | sh
+#
+# ┌──────────────────────────────────────────────────────────────────────┐
+# │ PLACEHOLDER — replace this file with the real installer.              │
+# │                                                                       │
+# │ This copy is served as a static file by GitHub Pages from the site    │
+# │ repo. It is intentionally a no-op so that piping it to `sh` cannot     │
+# │ do anything unexpected before the real installer ships.               │
+# │                                                                       │
+# │ The real installer should live with the binary release and typically: │
+# │   - detect OS/arch (Ubuntu/Debian/Fedora/RHEL/openSUSE)               │
+# │   - check for Docker                                                   │
+# │   - download the correct outhaul binary for the platform              │
+# │   - verify its checksum                                               │
+# │   - install it and set up the systemd unit as a non-root user         │
+# │                                                                       │
+# │ Reminder: GitHub Pages serves through a CDN with ~10 min caching, so   │
+# │ updates to this file take a few minutes to go live.                    │
+# └──────────────────────────────────────────────────────────────────────┘
+set -eu
+
+printf '%s\n' "Outhaul is not installable yet — the installer is still being built." >&2
+printf '%s\n' "Follow along at https://github.com/outhaul-dev/outhaul" >&2
+exit 1
