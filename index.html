@@ -46,8 +46,9 @@ svg .struct{stroke:var(--text-primary);} svg .tension{stroke:var(--accent);}
 
 /* ---------- nav ---------- */
 nav{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--border-subtle);background:rgba(10,12,13,.78);backdrop-filter:blur(10px);}
-.nav-inner{display:flex;align-items:center;gap:20px;height:56px;}
-.brand{display:flex;align-items:center;gap:10px;}
+.nav-inner{display:flex;align-items:center;gap:14px;min-height:56px;}
+.brand{display:flex;align-items:center;gap:10px;flex:none;}
+.nav-pill{flex:none;white-space:nowrap;}
 .brand svg{display:block}
 .brand b{font-weight:700;font-size:17px;letter-spacing:-.02em;}
 .brand b .h{color:var(--text-secondary);}
@@ -234,12 +235,32 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border-subtle);bac
 
 @media (max-width:900px){
   .nav-links .hide{display:none}
+  section.blk{padding:64px 0}
   .nums{grid-template-columns:repeat(2,1fr)}.num:nth-child(2){border-right:none}
   .steps,.features{grid-template-columns:1fr}
   .features{gap:1px}
-  .dash{grid-template-columns:1fr}.dash-side{display:none}
+  .dash{grid-template-columns:1fr;height:auto}.dash-side{display:none}
+  .dash-body{overflow:visible}
+  .dash-top{flex-wrap:wrap}.dash-top .sp{display:none}
   .dgrid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .wrap{padding:0 18px}
+  .sec-head{padding:0 18px;margin-bottom:32px}
+  .np-ext{display:none}
+  .hero{padding:52px 0 32px}
+  .hero .eyebrow{margin-bottom:16px}
+  section.blk{padding:52px 0}
+  .cta{padding:64px 0}
+  .stat-row{grid-template-columns:repeat(2,1fr)}
+  .num{padding:24px 16px}
+  .num .v{font-size:28px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:24px 20px}
+  .foot-brand{grid-column:1/-1}
+  .foot-bot{padding-left:18px;padding-right:18px}
+  .term-body{padding:16px 16px;font-size:12.5px}
+  .shot-cap{gap:14px 20px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -260,7 +281,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border-subtle);bac
       </svg>
       <b>out<span class="h">haul</span></b>
     </a>
-    <span class="nav-pill">v0 · building in public</span>
+    <span class="nav-pill">v0<span class="np-ext"> · building in public</span></span>
     <div class="nav-links">
       <a href="#how" class="hide">How it works</a>
       <a href="#features" class="hide">Features</a>
@@ -500,7 +521,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border-subtle);bac
       </div>
     </div>
     <div class="foot-bot">
-      <span class="lic">MIT licensed · open source · self-hosted</span>
+      <span class="lic">AGPL v3.0 licensed · open source · self-hosted</span>
       <span>© 2026 Outhaul · built in public</span>
     </div>
   </div>
